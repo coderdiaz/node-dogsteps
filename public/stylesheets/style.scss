@@ -1,1 +1,47 @@
 // Styles
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+.header {
+  background: #FFF;
+  padding: 30px 0;
+  .logotype {
+    padding: 10px 0;
+    display: block;
+    position: relative;
+    img {
+      position: absolute;
+      top: -10px;
+    }
+  }
+
+  .nav-link {
+    color: #2e2e2e;
+    &:hover {
+      color: darken(#2e2e2e, 10%);
+    }
+  }
+}
+
+.hero__image {
+  background-image: url(https://images.unsplash.com/photo-1494947665470-20322015e3a8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8e64be3b9dcb29b57f6034eeccc6561e&auto=format&fit=crop&w=1350&q=80);
+  background-position: center;
+  background-size: cover;
+  padding: 150px 0;
+  color: #FFF;
+
+  .hero__title {
+    font-weight: bold;
+  }
+}
+
+.footer {
+  background: #FFF;
+  min-height: 60px;
+  padding: 30px 0;
+}

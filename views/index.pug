@@ -1,5 +1,32 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header.header
+    .container
+      .row
+        .col-md-6
+          a(href="#", class="logotype")
+            img(src="https://cdn2.iconfinder.com/data/icons/veterinary-line-fluffy-pet/512/Dog-512.png", width="60")
+        .col-md-6
+          ul.nav.justify-content-end
+            li.nav-item
+              a(href="#", class="nav-link") Home
+            li.nav-item
+              a(href="#", class="nav-link") About
+            li.nav-item
+              a(href="#", class="nav-link") Contact
+            li.nav-item
+              a(href="#", class="nav-link btn btn-secondary mr-2") Register
+            li.nav-item
+              a(href="#", class="nav-link btn btn-secondary") Login
+  section.hero__image
+    .container
+      .row
+        .col-md-12
+          h2.hero__title DogSteps
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  footer.footer
+    .container
+      .row
+        .col-md-12.text-center
+          span DogSteps &copy; Copyright 2018. All right reserved.
