@@ -6,7 +6,8 @@ const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const ApiUsersRouter = require('./routes/api/v1/user');
+const ApiDogsRouter = require('./routes/api/v1/dog');
 
 const app = express();
 
@@ -27,7 +28,10 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+// API V1
+app.use('/api/v1/user', ApiUsersRouter);
+app.use('/api/v1/dog', ApiDogsRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
