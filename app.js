@@ -4,6 +4,20 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
+const firebase = require('firebase');
+require('firebase/auth');
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: process.env.FIREBASE_APIKEY,
+  authDomain: process.env.FIREBASE_AUTHDOMAIN,
+  databaseUrl: process.env.FIREBASE_DATABASEURL,
+  storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.FIREBASE_SENDERID,
+};
+
+// Initialized firebase
+firebase.initializeApp(firebaseConfig);
 
 const indexRouter = require('./routes/index');
 const ApiUsersRouter = require('./routes/api/v1/user');
