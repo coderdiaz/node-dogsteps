@@ -61,7 +61,9 @@ router.put('/:id', async (req, res, next) => {
 });
 
 /* DELETE /:id */
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
+  const {id} = req.params;
+  await User.findByIdAndDelete(id).exec();
   return res.status(204).json();
 });
 
